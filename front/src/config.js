@@ -26,6 +26,15 @@ const lessons = [
     img: '/img/transformations.png',
     description: 'In this example, we will see how to use geometric transformations in the context of image processing.',
   },
+  {
+    name: 'Histogram Equalization',
+    url: API + 'Histogram%20Equalization.ipynb',
+    simple: false,
+    img: '/img/hist.png',
+    description: 'This examples enhances an image with low contrast, using a method called histogram equalization, ' +
+    'which “spreads out the most frequent intensity values” in an image [1]. The equalized image has a roughly ' +
+    'linear cumulative distribution function.',
+  }
 ];
 
 const jupyterInstructions = 'http://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Running%20Code.html';
