@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  front:
+    build: .
+    ports:
+    - "3000:3000"
+    volumes:
+    - ../front:/app
+
+  notebook:
+    image: jupyter/datascience-notebook
+    command: start-notebook.sh --NotebookApp.token=''
+    ports:
+    - "8888:8888"
+    volumes:
+    - ../:/home/jovyan/work

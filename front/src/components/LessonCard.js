@@ -29,7 +29,7 @@ class LessonCard extends Component {
             href={lesson.url}
             target='_blank'
             className='btn btn-secondary'>
-            Przykładowy Jupyter Notebook
+            Jupyter Notebook
           </a>
         </div>
       </div>
