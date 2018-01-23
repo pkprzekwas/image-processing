@@ -30,23 +30,8 @@ class SearchBar extends Component {
           value={this.props.filterText}
           onChange={this.handleFilterTextChange}
           className='form-control form-control-lg'
-        />
-        <div
-          className='custom-control custom-checkbox'
           style={style}
-        >
-          <input
-            type='checkbox'
-            value={this.props.isStockOnly}
-            onChange={this.handleInStockChange}
-            className='custom-control-input'
-            id='inStock' />
-          <label
-            className='custom-control-label'
-            htmlFor='inStock'>
-            Simple
-          </label>
-        </div>
+        />
       </form>
     )
   }

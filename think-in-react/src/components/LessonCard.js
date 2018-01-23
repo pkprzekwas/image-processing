@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-class ProductRow extends Component {
+class LessonCard extends Component {
   render() {
-    const product = this.props.product;
+    const lesson = this.props.product;
 
     const style = {
       marginBottom: '2%',
@@ -11,27 +11,25 @@ class ProductRow extends Component {
     const sampleImg = <img
       className='card-img-top'
       style={{width: '348px'}}
-      src={product.img}
-      alt="Card image cap"
+      src={lesson.img}
+      alt=''
     />;
 
     return(
       <div className='card text-center'
            style={style}>
-        <div className='card-header'>
-          {product.name}
-        </div>
+        <h5 className='card-header'>{lesson.name}</h5>
         <div className='card-body'>
 
           {sampleImg}
           <p className='card-text'>
-            {product.description}
+            {lesson.description}
           </p>
           <a
-            href={product.url}
+            href={lesson.url}
             target='_blank'
-            className="btn btn-primary">
-            Sprawdz
+            className='btn btn-secondary'>
+            Przykładowy Jupyter Notebook
           </a>
         </div>
       </div>
@@ -39,4 +37,4 @@ class ProductRow extends Component {
   }
 }
 
-export default ProductRow;
+export default LessonCard;

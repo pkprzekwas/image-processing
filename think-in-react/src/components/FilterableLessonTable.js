@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import ProductTable from "./ProductTable";
+import LessonTable from "./LessonTable";
 import SearchBar from "./SearchBar";
 
-class FilterableProductTable extends Component {
+class FilterableLessonTable extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,8 +35,8 @@ class FilterableProductTable extends Component {
           onInStockChange={this.handleInStockChange}
           onFilterTextChange={this.handleFilterTextChange}
         />
-        <ProductTable
-          products={this.props.products}
+        <LessonTable
+          lessons={this.props.lessons}
           filterText={this.state.filterText}
           inStockOnly={this.state.inStockOnly}
         />
@@ -45,4 +45,4 @@ class FilterableProductTable extends Component {
   }
 }
 
-export default FilterableProductTable;
+export default FilterableLessonTable;
