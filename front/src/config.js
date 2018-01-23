@@ -2,39 +2,55 @@ const API = 'http://localhost:8888/notebooks/work/resources/';
 
 const lessons = [
   {
-    name: 'Canny edge detector',
-    url: API + 'Canny%20edge%20detector.ipynb',
-    simple: true,
-    img: '/img/canny.png',
-    description: 'The Canny filter is a multi-stage edge detector. It uses a filter based on the derivative of a ' +
-    'Gaussian in order to compute the intensity of the gradients.The Gaussian reduces the effect of noise ' +
-    'present in the image. Then, potential edges are thinned down to 1-pixel curves by removing non-maximum ' +
-    'pixels of the gradient magnitude. Finally, edge pixels are kept or removed using hysteresis thresholding' +
-    ' on the gradient magnitude.'
-  },
-  {
-    name: 'Corner detection',
+    name: 'Detekcja narożników (Corner detection)',
     url: API + 'Corner%20detection.ipynb',
     simple: true,
     img: '/img/corner_detection.png',
-    description: 'Detect corner points using the Harris corner detector and determine the subpixel position of corners',
+    description: 'Pozwala na detekcję narożników za pomocą detektora Harrisa. Narożnikiem nazywane jest' +
+    ' przecięcie się dwóch krawędzi',
   },
   {
-    name: 'Geometric transformations',
+    name: 'Detektor krawędzi Canny’ego (Canny edge detector)\n',
+    url: API + 'Canny%20edge%20detector.ipynb',
+    simple: true,
+    img: '/img/canny.png',
+    description: 'Filter Canny’ego to wielofazowy detektor krawędzi. Korzysta on z filtru bazowanego na pochodnej' +
+    ' filtru Gaussowskiego w celu obliczenia intensywności gradientu. Filtr Gaussa redukuje efekty szumu w obrazie.' +
+    ' Następnie, potencjalne krawędzie są sprowadzane do grubości 1 piksela oraz usuwane bądź zostawiane korzystając ' +
+    'z histerezy i progowania na podstawie wielkości gradientu.',
+  },
+  {
+    name: 'Transformacje geometryczne (Geometric transformations)\n',
     url: API + 'Geometric%20transformations.ipynb',
     simple: false,
     img: '/img/transformations.png',
-    description: 'In this example, we will see how to use geometric transformations in the context of image processing.',
+    description: 'Biblioteka scikit-image wspiera obsługę następujących przekształceń geometrycznych:' +
+    ' podobieństwa (similarity), transformacji afinicznej (affine transform), homograficznego (projective) ' +
+    'oraz wielomianowego (polynomial). Transformacje geometryczne mogą zostać przeprowadzone za pomocą ' +
+    'parametrów (skali, rotacji, translacji) lub za pomocą macierzy transformacji.\n',
   },
   {
-    name: 'Histogram Equalization',
+    name: 'Wyrównywanie histogramu (Histogram Equalization)',
     url: API + 'Histogram%20Equalization.ipynb',
     simple: false,
     img: '/img/hist.png',
-    description: 'This examples enhances an image with low contrast, using a method called histogram equalization, ' +
-    'which “spreads out the most frequent intensity values” in an image [1]. The equalized image has a roughly ' +
-    'linear cumulative distribution function.',
-  }
+    description: 'Metoda wyrównywania histogramu polega na powiększeniu globalnego kontrastu obrazów poprzez ' +
+    'rozciągnięcie wartości z niewielkiego zakresu sygnału opisującego obraz na zakres szerszy. Dzięki temu ' +
+    'natężenia są lepiej dystrybuowane na histogramie, co pozwala zwiększyć kontrast we fragmentach o jego ' +
+    'niskim poziomie. Wyrównywanie histogramu nie jest procesem skomplikowanym, gdyż nie wymaga podawania ' +
+    'zewnętrznych parametrów do przetworzenia obrazu, jednak często powoduje powstawanie nierealistycznych ' +
+    'efektów w fotografii.',
+  },
+  {
+    name: 'Wieloblokowy Lokalny Wzorzec Binarny - klasyfikacja tekstur',
+    url: API + 'Multi-Block%20Local%20Binary%20Pattern%20for%20texture%20classification.ipynb',
+    simple: false,
+    img: '/img/multi.png',
+    description: 'Metoda MB-LBP jest rozwinięciem metody LBP - zamiast wartości pojedynczych pikseli używane są ' +
+    'wartości zsumowanych bloków. Do obliczenia cech używanych jest 9 kwadratów jednakowych rozmiarów. Dla każdego ' +
+    'kwadratu obliczana jest suma intensywności pikseli. Porównanie tych sum do wartości centralnego kwadratu ' +
+    'wyznaczy odpowiednią cechę, podobnie jak w operacji na pikselach w metodzie LBP.'
+  },
 ];
 
 const jupyterInstructions = 'http://jupyter-notebook.readthedocs.io/en/latest/examples/Notebook/Running%20Code.html';

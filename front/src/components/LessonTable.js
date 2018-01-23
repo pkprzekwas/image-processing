@@ -9,7 +9,7 @@ class LessonTable extends Component {
     const rows = [];
 
     this.props.lessons.forEach((lesson) => {
-      if (lesson.name.indexOf(filterText) === -1) {
+      if (lesson.name.toLowerCase().indexOf(filterText.toLowerCase()) === -1) {
         return
       }
       if (inStockOnly && !lesson.simple) {
